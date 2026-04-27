@@ -542,7 +542,13 @@ body[data-scan="off"] .scanlines{ display:none; }
 @keyframes rollup{ to{ transform: translateY(-36px); } }
 
 /* ===== TICKER ===== */
+@property --ba {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
 .ticker{
+  position: relative;
   border-top: 1px solid rgba(255,255,255,.12);
   border-bottom: 1px solid rgba(255,255,255,.12);
   background: var(--accent);
@@ -550,6 +556,35 @@ body[data-scan="off"] .scanlines{ display:none; }
   overflow:hidden;
   padding: 14px 0;
 }
+.ticker::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  box-sizing: border-box;
+  background: conic-gradient(from var(--ba),
+    transparent 0deg,
+    transparent 140deg,
+    rgba(255,255,255,.6) 165deg,
+    #fff 180deg,
+    rgba(255,255,255,.6) 195deg,
+    transparent 220deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.ticker:hover::before{
+  opacity: 1;
+  animation: ba-spin 2.5s linear infinite;
+}
+@keyframes ba-spin{ to{ --ba: 360deg; } }
 .ticker-track{
   display:flex; white-space:nowrap;
   font-family:'Bowlby One','Archivo Black', sans-serif;
