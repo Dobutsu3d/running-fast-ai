@@ -1,0 +1,12 @@
+# Raw video files (too large for GitHub)
+*.mov
+
+# Internal production assets not used by the website
+Vault/Vault/Products/Nike/input/
+Vault/Vault/Products/Nike/refs/
+Vault/Vault/Products/Nike/futura-pt/
+Vault/Vault/Products/Nike/.claude/
+
+# Claude superpowers internal files
+.superpowers/
+.claude/
