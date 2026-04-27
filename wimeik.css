@@ -551,15 +551,16 @@ body[data-scan="off"] .scanlines{ display:none; }
   padding: 14px 0;
 }
 .ticker-track{
-  display:flex; gap: 40px; white-space:nowrap;
+  display:flex; white-space:nowrap;
   font-family:'Bowlby One','Archivo Black', sans-serif;
   font-size: 20px; letter-spacing:.08em;
   text-transform: uppercase;
   animation: tickscroll 28s linear infinite;
   will-change: transform;
 }
+.ticker-track > span{ margin-right: 40px; }
 .ticker-star{ color: var(--bg); }
-@keyframes tickscroll{ to{ transform: translateX(-50%); } }
+@keyframes tickscroll{ from{ transform: translateX(0); } to{ transform: translateX(calc(-100% / 6)); } }
 
 /* ===== POWERS ===== */
 .powers{
