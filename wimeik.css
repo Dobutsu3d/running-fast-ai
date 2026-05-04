@@ -1108,6 +1108,21 @@ html.menu-open .mobile-nav{ opacity:1; pointer-events:auto; }
 
   .pmodal-panel{ padding: 20px 16px 80px; }
   .pmodal-close{ top: 12px; right: 12px; }
+
+  /* ── BRAND/IMAGE: single centered word on mobile ── */
+  .mega-line > span:nth-child(1),
+  .mega-line > span:nth-child(3) { display: none; }
+  .mega-line { font-size: clamp(70px, 26vw, 130px); gap: 0; }
+  .mega-line-ai > span:nth-child(2) {
+    color: var(--accent) !important;
+    -webkit-text-stroke: 0 !important;
+  }
+
+  /* ── CTA hub: prevent horizontal overflow on narrow phones ── */
+  .cta-hub {
+    width: min(400px, calc(100vw - 32px));
+    height: min(400px, calc(100vw - 32px));
+  }
 }
 
 /* ── Small phones (≤380px) ── */

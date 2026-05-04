@@ -206,10 +206,14 @@
     scrollTicking = true;
     requestAnimationFrame(() => {
       const y = scrollY;
-      megaLines.forEach((el, i) => {
-        const dir = i % 2 === 0 ? -1 : 1;
-        el.style.transform = `translateX(${dir * (y * 0.08) % 400 - 200}px)`;
-      });
+      if (window.innerWidth > 640) {
+        megaLines.forEach((el, i) => {
+          const dir = i % 2 === 0 ? -1 : 1;
+          el.style.transform = `translateX(${dir * (y * 0.08) % 400 - 200}px)`;
+        });
+      } else {
+        megaLines.forEach(el => { el.style.transform = ''; });
+      }
       let cur = 'top';
       const thresh = innerHeight * 0.35;
       for (const s of sections) {
