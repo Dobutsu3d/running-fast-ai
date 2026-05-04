@@ -361,16 +361,16 @@
   const PROJECTS = {
     'byredo': {
       title: 'Byredo',
-      subtitle: 'Cautic Rouge',
+      subtitle: 'Chaotique Rouge',
       type: 'AI Visual Imagery Production',
-      year: '2025',
+      year: '2026',
       cover: 'Vault/Vault/Products/Byredo/BYR1.webp',
       video: 'Vault/Vault/Spots/RogueChaotique.mp4',
-      description: `A fictional fragrance world built around Byredo Cautic Rouge — a scent conceived as a collision between raw heat and cold precision. The visual campaign translates the tension of the formula into image: molten reds, iridescent surfaces, and sculptural still-lifes that feel both brutal and refined.
+      description: `A fictional fragrance world built around Byredo Chaotique Rouge — a scent conceived as a collision between raw heat and cold precision. The visual campaign translates the tension of the formula into image: molten reds, iridescent surfaces, and sculptural still-lifes that feel both brutal and refined.
 
 Each frame is constructed to feel like a fragment of a larger ritual — heat rising from glass, the geometry of a bottle as a totem of desire.
 
-The result is a cinematic fragrance campaign that blurs the line between editorial and art direction, positioning Cautic Rouge as a scent for those who move at full intensity.`,
+The result is a cinematic fragrance campaign that blurs the line between editorial and art direction, positioning Chaotique Rouge as a scent for those who move at full intensity.`,
       images: [
         'Vault/Vault/Products/Byredo/BYR1.webp',
         'Vault/Vault/Products/Byredo/BYR2.webp',
